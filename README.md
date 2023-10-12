@@ -8,3 +8,6 @@ npx cypress open
 
 ## Cypress website
 cypress.io
+
+## Table
+https://www.youtube.com/watch?v=eVe4ySgW0qw

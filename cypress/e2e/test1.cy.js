@@ -46,7 +46,7 @@ describe('Wonder Lab Test Spec', () => {
 
     })
 
-    it.only('Show/Hide', () => {
+    it('Show/Hide', () => {
         cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
         
         // Click to hide the text box
@@ -63,6 +63,30 @@ describe('Wonder Lab Test Spec', () => {
 
         // Validating that the text box is not hidden
         cy.get('#displayed-text').invoke('attr', 'style').should('not.contain', 'none')
+    })
+  
+    it.only('Web Table Fixed Header', () => {
+        cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
+        
+        cy.contains('.tableFixHead > #product > tbody tr', 'Joe')
+        .find('td')
+        .spread((name, pos, city, amount) => {
+            
+            return {
+                'Name': name,
+                'Position': pos,
+                'City': city,
+                'Amount': amount
+            }
+        })
+        .then($res => {
+            cy.log($res['Name'].innerText)
+            cy.log($res['Position'].innerText)
+            cy.log($res['City'].innerText)
+            cy.log($res['Amount'].innerText)
+
+            cy.wrap($res['Amount'])
+        })
     })
   
 })
