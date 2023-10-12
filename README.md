@@ -1,3 +1,6 @@
+## Introduction
+With Cypress, you can easily create tests for your modern web applications, debug them visually, and automatically run them in your continuous integration builds.
+
 ## Running the test
  * You need NodeJs installed
  * You need vscode
