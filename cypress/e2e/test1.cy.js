@@ -39,6 +39,7 @@ describe('Wonder Lab Test Spec', () => {
     it('Suggestion', () => {
         cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
         cy.get('#autocomplete').type('South')
+        cy.wait(3000)
         cy.get('#ui-id-1').find('li').each(($el, index) => {
             cy.log($el.find('.ui-menu-item'))
             //cy.wrap($el.find('.ui-menu-item'))
@@ -71,7 +72,6 @@ describe('Wonder Lab Test Spec', () => {
         cy.contains('.tableFixHead > #product > tbody tr', 'Joe')
         .find('td')
         .spread((name, pos, city, amount) => {
-            
             return {
                 'Name': name,
                 'Position': pos,
