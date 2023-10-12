@@ -14,7 +14,8 @@ npx cypress open
 ```
 * On the window that will pop up, select e2e Testing
 * Select browser of your choice, this was tested on google and firefox
-* Select test1.cy.js
+* Select test1.cy.js and that all you need to do.
+
 
 ## New Project
 ```
