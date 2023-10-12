@@ -18,7 +18,7 @@ describe('Wonder Lab Test Spec', () => {
         })
 
         // waiting so that you can see that Radio button was selected
-        cy.wait(5000)
+        cy.wait(3000)
 
         // Checking Radio button 2
         cy.get('[for="radio2"]').find('input').check()
@@ -65,7 +65,7 @@ describe('Wonder Lab Test Spec', () => {
         cy.get('#displayed-text').invoke('attr', 'style').should('not.contain', 'none')
     })
   
-    it.only('Web Table Fixed Header', () => {
+    it('Web Table Fixed Header', () => {
         cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
         
         cy.contains('.tableFixHead > #product > tbody tr', 'Joe')
