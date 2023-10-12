@@ -2,9 +2,14 @@
  * You need NodeJs installed
  * You need vscode
  * You need to clone the project
- * and run the following commands
+ * Run the following commands inside the project root folder
+Install all the required dependencies
 ```
 npm install
+```
+
+Open cypress tool
+```
 npx cypress open
 ```
 * On the window that will pop up, select e2e Testing
