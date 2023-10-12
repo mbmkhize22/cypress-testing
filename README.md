@@ -3,12 +3,12 @@
  * You need vscode
  * You need to clone the project
  * Run the following commands inside the project root folder
-Install all the required dependencies
+ - Install all the required dependencies
 ```
 npm install
 ```
 
-Open cypress tool
+- Open cypress tool
 ```
 npx cypress open
 ```
