@@ -85,7 +85,7 @@ describe('Wonder Lab Test Spec', () => {
             cy.log($res['City'].innerText)
             cy.log($res['Amount'].innerText)
 
-            cy.wrap($res['Amount'])
+            cy.wrap($res['Amount']).should('contain', 46)
         })
     })
   
